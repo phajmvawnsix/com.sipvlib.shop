@@ -1,0 +1,25 @@
+{
+    "name": "SiPV.Shop",
+    "rootNamespace": "",
+    "references": [
+        "SiPV.Event",
+        "SiPV.Debugging",
+        "SiPV.Config",
+        "SiPV.Pool",
+        "SiPV.UserData",
+        "SiPV.Utilities",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:60bfecf5cb232594891bc622f40d6bed",
+        "GUID:6ff1efac668145cd989b2b5879eaacb9",
+        "SiPV.Ads"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

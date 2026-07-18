@@ -1,0 +1,26 @@
+{
+  "name": "com.sipvlib.shop",
+  "version": "1.0.0",
+  "displayName": "SiPVLib Shop",
+  "description": "A store-agnostic in-game shop layer (ShopManager/IShopManager) on top of Unity IAP v5, supporting IAP, currency-conversion, rewarded-ad, and free shop items with purchase/restore orchestration, reward granting, and event broadcasting.",
+  "unity": "6000.3",
+  "author": {
+    "name": "phajmvawnsix"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sipvlib",
+    "shop"
+  ],
+  "dependencies": {
+    "com.sipvlib.ads": "https://github.com/phajmvawnsix/com.sipvlib.ads.git",
+    "com.sipvlib.config": "https://github.com/phajmvawnsix/com.sipvlib.config.git",
+    "com.sipvlib.debugging": "https://github.com/phajmvawnsix/com.sipvlib.debugging.git",
+    "com.sipvlib.event": "https://github.com/phajmvawnsix/com.sipvlib.event.git",
+    "com.sipvlib.pool": "https://github.com/phajmvawnsix/com.sipvlib.pool.git",
+    "com.sipvlib.userdata": "https://github.com/phajmvawnsix/com.sipvlib.userdata.git",
+    "com.sipvlib.utilities": "https://github.com/phajmvawnsix/com.sipvlib.utilities.git",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.unity.purchasing": "5.4.1"
+  }
+}
