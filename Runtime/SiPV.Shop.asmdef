@@ -20,6 +20,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.sipvlib.ads",
+            "expression": "",
+            "define": "SIPV_ADS"
+        }
+    ],
     "noEngineReferences": false
 }

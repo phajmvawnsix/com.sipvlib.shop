@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Cysharp.Threading.Tasks;
+#if SIPV_ADS
 using SiPVLib.Ads;
-using SiPVLib.Ads.Configs;
-using SiPVLib.Ads.Events;
 using SiPVLib.Ads.Parameters;
+#endif
 using SiPVLib.Config;
 using SiPVLib.Config.Configs;
 using SiPVLib.Debugging;
@@ -396,7 +396,12 @@ namespace SiPVLib.Shop
                     break;
 
                 case ShopItemType.Ads:
+#if SIPV_ADS
                     BeginAdsPurchase(item, placement, onSuccess, onFailed);
+#else
+                    FailPurchase(item, placement, onFailed,
+                        $"Shop item '{item.Id}' requires the com.sipvlib.ads package, which is not installed.");
+#endif
                     return;
 
                 default:
@@ -411,6 +416,7 @@ namespace SiPVLib.Shop
             onSuccess?.Invoke(item);
         }
 
+#if SIPV_ADS
         /// <summary>
         /// Shows a rewarded ad via <see cref="AdsManager"/> and grants the item's reward items once the
         /// ad reports a reward. Terminal result (success/failure) is delivered asynchronously through
@@ -457,6 +463,7 @@ namespace SiPVLib.Shop
                     onSuccess?.Invoke(item);
                 }));
         }
+#endif
 
         private async UniTaskVoid RestorePurchasesInternalAsync(string placement, Action onSuccess,
             Action<string> onFailed)
